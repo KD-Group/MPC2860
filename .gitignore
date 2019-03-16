@@ -8,6 +8,9 @@ motion.py
 *.pyd
 *.user
 .idea
+dist/
+src/MPC2860.egg-info
+src/motion_2860_wrap.cpp
 
 # Prerequisites
 *.d
