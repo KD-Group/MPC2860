@@ -9,8 +9,6 @@ motion.py
 *.user
 .idea
 dist/
-!/MPC2860/*dll
-!/MPC2860/*lib
 
 # Prerequisites
 *.d
@@ -29,6 +27,7 @@ dist/
 *.so
 *.dylib
 *.dll
+!/MPC2860/*dll
 
 # Fortran module files
 *.mod
@@ -38,7 +37,9 @@ dist/
 *.lai
 *.la
 *.a
-*.lib
+*.
+lib
+!/MPC2860/*lib
 
 # Executables
 *.exe
