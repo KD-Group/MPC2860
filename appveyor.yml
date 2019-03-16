@@ -11,7 +11,7 @@ environment:
     - PYTHON: "C:\\Python36"
 
   PYPIPASSWORD:
-  secure: PIkaT8nR3rGAsDFAuwFA4A==
+    secure: PIkaT8nR3rGAsDFAuwFA4A==
 
 install:
   - SET "PYTHONHOME=%PYTHON%"
