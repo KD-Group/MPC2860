@@ -24,11 +24,9 @@ before_test:
   - python --version
   - swig -version
 
-test_script:
-  - "%PYTHON%\\python.exe setup.py test"
-
 build_script:
   - "[ -e dist ] && rm dist -rf || true"
+  - "%PYTHON%\\python.exe setup.py test"
   - "%PYTHON%\\python.exe setup.py bdist_wheel"
 
 artifacts:
