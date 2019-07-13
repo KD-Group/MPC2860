@@ -37,7 +37,7 @@ class BuildPy(build_py):
 copy_ext_modules()
 
 setup(name='MPC2860',
-      version='0.1',
+      version='0.2',
       author="SF Zhou, WingC",
       author_email="1018957763@qq.com",
       description="""Python module for MPC2860""",
