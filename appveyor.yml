@@ -7,8 +7,8 @@ environment:
     # isn't covered by this document) at the time of writing.
 
     - PYTHON: "C:\\Python34"
-    - PYTHON: "C:\\Python35"
-    - PYTHON: "C:\\Python36"
+#    - PYTHON: "C:\\Python35"
+#    - PYTHON: "C:\\Python36"
 
   PYPIPASSWORD:
     secure: PIkaT8nR3rGAsDFAuwFA4A==

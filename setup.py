@@ -34,6 +34,19 @@ class BuildPy(build_py):
         super(build_py, self).run()
 
 
+# pass cmdclass={'bdist_wheel': bdist_wheel} to set {abi tag} none
+# wheel file format:
+# {distribution}-{version}(-{build tag})?-{python tag}-{abi tag}-{platform tag}.whl
+try:
+    from wheel.bdist_wheel import bdist_wheel as _bdist_wheel
+    class bdist_wheel(_bdist_wheel):
+        def finalize_options(self):
+            _bdist_wheel.finalize_options(self)
+            self.root_is_pure = True
+except ImportError:
+    bdist_wheel = None
+
+
 copy_ext_modules()
 
 setup(name='MPC2860',
@@ -51,6 +64,7 @@ setup(name='MPC2860',
       ],
       cmdclass={
           'build_py': BuildPy,
+          'bdist_wheel': bdist_wheel,
       },
       packages=find_packages(),
       package_dir={'MPC2860': 'MPC2860'},
