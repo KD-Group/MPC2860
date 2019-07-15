@@ -50,7 +50,7 @@ except ImportError:
 copy_ext_modules()
 
 setup(name='MPC2860',
-      version='0.2',
+      version='0.3',
       author="SF Zhou, WingC",
       author_email="1018957763@qq.com",
       description="""Python module for MPC2860""",
